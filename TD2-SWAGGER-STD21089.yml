@@ -412,7 +412,7 @@ paths:
             text/plain:
               schema:
                 type: string
-                example: "Returns the id of the deleted projection"
+                example: "Returns id of deleted projection"
 
         400:
           description: Error
@@ -527,7 +527,7 @@ paths:
     get:
       tags:
         - "Category"
-      summary: get the category by specified id
+      summary: get category by specified id
       operationId: getCategory
       parameters:
         - name: id
@@ -548,7 +548,7 @@ paths:
     put:
       tags:
         - "Category"
-      summary: allows you to modify category data except its id
+      summary: modify category data except its id
       parameters:
         - name: id
           in: path
@@ -575,7 +575,7 @@ paths:
     delete:
       tags:
         - "Category"
-      summary: delete category by referring to the id
+      summary: delete category by id
       parameters:
         - name: id
           in: path
