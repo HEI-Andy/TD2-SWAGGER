@@ -1,9 +1,10 @@
 openapi: 3.0.1
 info:
-  title: STD21089
-  
+  title: STD21089-TD2
   version: 1.0.0
 
+servers:
+- url: https://STD2189.io
 paths:
   /rooms:
     get:
@@ -567,6 +568,7 @@ components:
         date:
           type: string
           format: date
+
     Film:
       type: object
       properties:
@@ -574,6 +576,7 @@ components:
           type: number
       allOf:
         - $ref: '#/components/schemas/NewFilm'
+
     Category:
       type: object
       properties:
@@ -582,12 +585,14 @@ components:
           example: '1'
       allOf:
         - $ref: '#/components/schemas/NewCategory'
+
     NewCategory:
       type: object
       properties:
         name:
           type: string
           example: "Action"
+
     NewProjection:
       type: object
       properties:
@@ -601,6 +606,7 @@ components:
           enum:
             - A
             - B
+
     Projection:
       type: object
       properties:
@@ -611,6 +617,7 @@ components:
           $ref: '#/components/schemas/Film'
         Room:
           $ref: '#/components/schemas/Room'
+
     Calendar:
       type: object
       properties:
